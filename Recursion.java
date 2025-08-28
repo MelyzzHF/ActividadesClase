@@ -55,6 +55,17 @@ public class Recursion {
 
     }
 
+    public static String invertirCadena(String cadena){
+
+          if (cadena == null || cadena.length() <= 1) {
+            return cadena;
+        } else {
+            return cadena.charAt(cadena.length() - 1) + invertirCadena(cadena.substring(0, cadena.length() - 1));
+        }
+
+
+        }
+
       
     
 

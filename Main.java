@@ -14,12 +14,14 @@ public class Main {
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
         int opcion = -1;
-        do {
+    
             try {
                 System.out.println("\n-------- Menú Principal --------");
                 System.out.println("1. Calcular Factorial ");
                 System.out.println("2. Calcular Fibonacci ");
                 System.out.println("3. Calcular Suma de digitos ");
+                System.out.println("4. Inversión de Cadena");
+
 
                 System.out.println("0. Salir");
                 System.out.print("Opción: ");
@@ -49,20 +51,24 @@ public class Main {
                         System.out.println("\nFibonacci de "+ numd +" :" +Recursion.sumaDigitos(numd));
                         break;
 
+                    case 4:
+                        String cadena = " ";
+                        System.out.println("Cadena a invertir: ");
+                        cadena = entrada.readLine();
+                        System.out.println("\nInversión de "+ cadena +" :" +Recursion.invertirCadena(cadena));
+                        break;
+
 
                     case 0:
                         System.out.println("Saliendo...");
                         break;
-                    default:
-                        System.out.println("Opción inválida.( Solo números entre el 0-6 )");
+                    
 
                 }
 
             } catch (NumberFormatException e) {
                 System.out.println("Inválido, ingresa un número ");
             }
-        } while (opcion != 0);
-
 
 
     }
