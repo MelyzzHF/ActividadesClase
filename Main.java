@@ -21,8 +21,7 @@ public class Main {
                 System.out.println("2. Calcular Fibonacci ");
                 System.out.println("3. Calcular Suma de digitos ");
                 System.out.println("4. Inversión de Cadena");
-
-
+                System.out.println("5. Conteo de vocales");
                 System.out.println("0. Salir");
                 System.out.print("Opción: ");
 
@@ -56,6 +55,13 @@ public class Main {
                         System.out.println("Cadena a invertir: ");
                         cadena = entrada.readLine();
                         System.out.println("\nInversión de "+ cadena +" :" +Recursion.invertirCadena(cadena));
+                        break;
+                        
+                    case 5:
+                        String vocales = " ";
+                        System.out.println("Conteo de vocales de la palabra: ");
+                        vocales = entrada.readLine();
+                        System.out.println("\nConteo de vocales de la palabra"+ vocales +" :" +Recursion.conteoVocales(vocales));
                         break;
 
 

@@ -66,10 +66,23 @@ public class Recursion {
 
         }
 
+
+    public static int conteoVocales (String vocales){
+        if (vocales.isEmpty()){
+            return 0;
+        }
+
+        else{
+            char vc = Character.toLowerCase(vocales.charAt(0));
+            int suma = (vc=='a'||vc=='e'||vc=='i'||vc=='o'||vc=='u') ? 1 : 0;
+            return suma + conteoVocales(vocales.substring(1)); 
+        }
+    }
+}
+
       
     
 
       
-}
 
 
